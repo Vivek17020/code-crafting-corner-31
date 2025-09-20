@@ -47,6 +47,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        breaking: {
+          DEFAULT: "hsl(var(--breaking))",
+          foreground: "hsl(var(--breaking-foreground))",
+        },
+        category: {
+          business: "hsl(var(--category-business))",
+          sports: "hsl(var(--category-sports))",
+          politics: "hsl(var(--category-politics))",
+          science: "hsl(var(--category-science))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
