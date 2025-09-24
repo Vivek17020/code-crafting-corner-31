@@ -50,6 +50,11 @@ export const use1inchApi = () => {
 
   const getQuote = useCallback(async (params: QuoteParams, maxRetries = 3): Promise<QuoteResponse | null> => {
     if (!apiKey) {
+      console.error('1inch API: Missing API key for quote request', {
+        fromToken: params.fromTokenAddress,
+        toToken: params.toTokenAddress,
+        amount: params.amount
+      });
       toast({
         title: "API Key Required",
         description: "Please set your 1inch API key first",
@@ -107,7 +112,12 @@ export const use1inchApi = () => {
       const result = await makeRequest();
       return result;
     } catch (error: any) {
-      console.error('1inch API error:', error);
+      console.error('1inch API error:', error, {
+        hasApiKey: !!apiKey,
+        params,
+        errorType: error.name,
+        errorMessage: error.message
+      });
       toast({
         title: "Quote Failed",
         description: error.message || "Failed to fetch quote from 1inch. Please try again.",

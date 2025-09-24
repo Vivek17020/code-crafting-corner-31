@@ -101,6 +101,13 @@ export const useSocketBridge = () => {
 
     // If no API key, return mock data
     if (!socketApiKey) {
+      console.error('Socket Bridge API: Missing API key for bridge quote request', {
+        fromChain: request.fromChainId,
+        toChain: request.toChainId,
+        fromToken: request.fromTokenAddress,
+        toToken: request.toTokenAddress,
+        amount: request.fromAmount
+      });
       try {
         await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API delay
         
@@ -275,7 +282,12 @@ export const useSocketBridge = () => {
       });
       return quotes;
     } catch (error: any) {
-      console.error('Socket API error:', error);
+      console.error('Socket API error:', error, {
+        hasApiKey: !!socketApiKey,
+        request,
+        errorType: error.name,
+        errorMessage: error.message
+      });
       setError(error.message || 'Failed to fetch bridge quotes');
       
       toast({
