@@ -1,4 +1,4 @@
-import { ArrowLeft, Shield, Smartphone, Zap, Globe, Database, Lock } from "lucide-react";
+import { ArrowLeft, Shield, Zap, Globe, Database, TrendingUp, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,20 +18,38 @@ export default function About() {
           </Link>
           <div>
             <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              About ZKPresence
+              About TheBulletinBriefs
             </h1>
             <p className="text-muted-foreground mt-2">
-              Privacy-first event attendance verification and NFT rewards
+              Your trusted source for crypto, DeFi, and blockchain news
             </p>
           </div>
         </div>
+
+        {/* Mission Section */}
+        <Card className="mb-8 gradient-border">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <TrendingUp className="w-6 h-6 mr-2 text-primary" />
+              Our Mission
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed">
+              TheBulletinBriefs delivers comprehensive coverage of the rapidly evolving cryptocurrency and DeFi ecosystem. 
+              We provide real-time news, in-depth analysis, and actionable insights to help our readers stay ahead in the 
+              digital asset space. Our platform combines cutting-edge technology with expert journalism to deliver the 
+              most relevant and timely information.
+            </p>
+          </CardContent>
+        </Card>
 
         {/* Features Section */}
         <Card className="mb-8 gradient-border">
           <CardHeader>
             <CardTitle className="flex items-center">
               <Zap className="w-6 h-6 mr-2 text-primary" />
-              Key Features
+              Platform Features
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -39,36 +57,36 @@ export default function About() {
               <div className="flex items-start space-x-3">
                 <Shield className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <h3 className="font-semibold">Zero-Knowledge Proofs</h3>
+                  <h3 className="font-semibold">Real-time Price Data</h3>
                   <p className="text-sm text-muted-foreground">
-                    Verify attendance without revealing personal information using zk-SNARKs
+                    Live cryptocurrency prices and portfolio tracking with advanced analytics
                   </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Smartphone className="w-5 h-5 text-primary mt-1" />
+                <Database className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <h3 className="font-semibold">Mobile-First Design</h3>
+                  <h3 className="font-semibold">DeFi Integration</h3>
                   <p className="text-sm text-muted-foreground">
-                    Native iOS and Android apps for seamless event check-ins
+                    Seamless token swapping and cross-chain bridging capabilities
                   </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Globe className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <h3 className="font-semibold">NFT Rewards</h3>
+                  <h3 className="font-semibold">Multi-chain Support</h3>
                   <p className="text-sm text-muted-foreground">
-                    Unique event NFTs as proof of attendance and collectibles
+                    Coverage across Ethereum, Polygon, Arbitrum, and Base networks
                   </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Lock className="w-5 h-5 text-primary mt-1" />
+                <TrendingUp className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <h3 className="font-semibold">Privacy Preserved</h3>
+                  <h3 className="font-semibold">Expert Analysis</h3>
                   <p className="text-sm text-muted-foreground">
-                    No personal data stored, only cryptographic proofs
+                    In-depth market analysis and trend predictions from industry experts
                   </p>
                 </div>
               </div>
@@ -81,134 +99,185 @@ export default function About() {
           <CardHeader>
             <CardTitle className="flex items-center">
               <Database className="w-6 h-6 mr-2 text-primary" />
-              Sponsor APIs & Technologies
+              Powered by Leading APIs
             </CardTitle>
+            <p className="text-sm text-muted-foreground">
+              Our platform leverages industry-leading APIs to provide comprehensive DeFi and blockchain services
+            </p>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="text-center p-4 rounded-lg bg-card/50">
-                <Badge variant="secondary" className="mb-2">Polygon</Badge>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Covalent */}
+              <div className="p-6 rounded-lg bg-card/50 border border-border/50">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">C</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Covalent API</h3>
+                      <Badge variant="secondary" className="text-xs">Blockchain Data</Badge>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => window.open('https://www.covalenthq.com/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </div>
                 <p className="text-sm text-muted-foreground">
-                  NFT minting and smart contracts on Polygon network
+                  Powers our <strong>portfolio tracking</strong> and <strong>transaction history</strong> features. 
+                  Provides comprehensive blockchain data across multiple networks for real-time balance updates 
+                  and detailed transaction analysis.
                 </p>
               </div>
-              <div className="text-center p-4 rounded-lg bg-card/50">
-                <Badge variant="secondary" className="mb-2">Supabase</Badge>
+
+              {/* 1inch */}
+              <div className="p-6 rounded-lg bg-card/50 border border-border/50">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">1inch API</h3>
+                      <Badge variant="secondary" className="text-xs">DEX Aggregator</Badge>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => window.open('https://1inch.io/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </div>
                 <p className="text-sm text-muted-foreground">
-                  Backend database and real-time event management
+                  Enables our <strong>token swapping</strong> functionality. Aggregates liquidity from multiple 
+                  DEXs to find the best rates and lowest slippage for users trading cryptocurrencies 
+                  across supported networks.
                 </p>
               </div>
-              <div className="text-center p-4 rounded-lg bg-card/50">
-                <Badge variant="secondary" className="mb-2">1inch</Badge>
+
+              {/* Socket */}
+              <div className="p-6 rounded-lg bg-card/50 border border-border/50">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">S</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Socket API</h3>
+                      <Badge variant="secondary" className="text-xs">Cross-chain Bridge</Badge>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => window.open('https://socket.tech/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </div>
                 <p className="text-sm text-muted-foreground">
-                  Token swapping and DeFi integrations
+                  Powers our <strong>cross-chain bridging</strong> capabilities. Enables seamless asset 
+                  transfers between different blockchain networks including Ethereum, Polygon, Arbitrum, 
+                  and Base with optimal routing and fees.
                 </p>
               </div>
-              <div className="text-center p-4 rounded-lg bg-card/50">
-                <Badge variant="secondary" className="mb-2">Circom</Badge>
+
+              {/* Supabase */}
+              <div className="p-6 rounded-lg bg-card/50 border border-border/50">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">⚡</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Supabase</h3>
+                      <Badge variant="secondary" className="text-xs">Backend & Database</Badge>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => window.open('https://supabase.com/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </div>
                 <p className="text-sm text-muted-foreground">
-                  Zero-knowledge circuit implementation
-                </p>
-              </div>
-              <div className="text-center p-4 rounded-lg bg-card/50">
-                <Badge variant="secondary" className="mb-2">IPFS</Badge>
-                <p className="text-sm text-muted-foreground">
-                  Decentralized NFT metadata storage
-                </p>
-              </div>
-              <div className="text-center p-4 rounded-lg bg-card/50">
-                <Badge variant="secondary" className="mb-2">WalletConnect</Badge>
-                <p className="text-sm text-muted-foreground">
-                  Multi-wallet integration and authentication
+                  Provides our <strong>backend infrastructure</strong> including user authentication, 
+                  data storage, and real-time features. Handles news article management, user preferences, 
+                  and secure API key storage for seamless platform operations.
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Architecture Diagram */}
+        {/* Technology Stack */}
         <Card className="mb-8 gradient-border">
           <CardHeader>
-            <CardTitle>System Architecture</CardTitle>
+            <CardTitle>Technology Stack</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="bg-card/30 rounded-lg p-6 overflow-auto">
-              <svg viewBox="0 0 800 500" className="w-full h-auto max-w-full">
-                {/* Mobile App */}
-                <rect x="50" y="50" width="120" height="80" rx="10" fill="hsl(var(--primary))" opacity="0.2" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <text x="110" y="85" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="12" fontWeight="bold">Mobile App</text>
-                <text x="110" y="100" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">(iOS/Android)</text>
-                
-                {/* ZK Circuit */}
-                <rect x="250" y="50" width="120" height="80" rx="10" fill="hsl(var(--secondary))" opacity="0.2" stroke="hsl(var(--secondary))" strokeWidth="2"/>
-                <text x="310" y="85" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="12" fontWeight="bold">ZK Circuit</text>
-                <text x="310" y="100" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">(Circom)</text>
-                
-                {/* Backend API */}
-                <rect x="450" y="50" width="120" height="80" rx="10" fill="hsl(var(--accent))" opacity="0.2" stroke="hsl(var(--accent))" strokeWidth="2"/>
-                <text x="510" y="85" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="12" fontWeight="bold">Backend API</text>
-                <text x="510" y="100" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">(Supabase)</text>
-                
-                {/* Blockchain */}
-                <rect x="350" y="200" width="120" height="80" rx="10" fill="hsl(var(--primary))" opacity="0.2" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                <text x="410" y="235" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="12" fontWeight="bold">Polygon</text>
-                <text x="410" y="250" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">(Smart Contracts)</text>
-                
-                {/* IPFS */}
-                <rect x="150" y="200" width="120" height="80" rx="10" fill="hsl(var(--secondary))" opacity="0.2" stroke="hsl(var(--secondary))" strokeWidth="2"/>
-                <text x="210" y="235" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="12" fontWeight="bold">IPFS</text>
-                <text x="210" y="250" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">(NFT Storage)</text>
-                
-                {/* 1inch API */}
-                <rect x="550" y="200" width="120" height="80" rx="10" fill="hsl(var(--accent))" opacity="0.2" stroke="hsl(var(--accent))" strokeWidth="2"/>
-                <text x="610" y="235" textAnchor="middle" fill="hsl(var(--foreground))" fontSize="12" fontWeight="bold">1inch API</text>
-                <text x="610" y="250" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">(Token Swaps)</text>
-                
-                {/* Arrows */}
-                <defs>
-                  <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="hsl(var(--muted-foreground))" />
-                  </marker>
-                </defs>
-                
-                {/* Mobile to ZK */}
-                <line x1="170" y1="90" x2="250" y2="90" stroke="hsl(var(--muted-foreground))" strokeWidth="2" markerEnd="url(#arrowhead)"/>
-                
-                {/* ZK to Backend */}
-                <line x1="370" y1="90" x2="450" y2="90" stroke="hsl(var(--muted-foreground))" strokeWidth="2" markerEnd="url(#arrowhead)"/>
-                
-                {/* Backend to Blockchain */}
-                <line x1="510" y1="130" x2="410" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="2" markerEnd="url(#arrowhead)"/>
-                
-                {/* Mobile to IPFS */}
-                <line x1="110" y1="130" x2="210" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="2" markerEnd="url(#arrowhead)"/>
-                
-                {/* Backend to 1inch */}
-                <line x1="570" y1="90" x2="610" y2="200" stroke="hsl(var(--muted-foreground))" strokeWidth="2" markerEnd="url(#arrowhead)"/>
-                
-                {/* Flow Labels */}
-                <text x="210" y="85" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">Proof Gen</text>
-                <text x="410" y="85" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">Verify</text>
-                <text x="460" y="170" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">Mint NFT</text>
-                <text x="160" y="170" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">Store Media</text>
-                <text x="590" y="150" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10">DeFi</text>
-              </svg>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">React</Badge>
+                <p className="text-xs text-muted-foreground">Frontend Framework</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">TypeScript</Badge>
+                <p className="text-xs text-muted-foreground">Type Safety</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">Tailwind CSS</Badge>
+                <p className="text-xs text-muted-foreground">Styling</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">Vite</Badge>
+                <p className="text-xs text-muted-foreground">Build Tool</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">Wagmi</Badge>
+                <p className="text-xs text-muted-foreground">Web3 Integration</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">Zustand</Badge>
+                <p className="text-xs text-muted-foreground">State Management</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">Radix UI</Badge>
+                <p className="text-xs text-muted-foreground">UI Components</p>
+              </div>
+              <div className="text-center">
+                <Badge variant="outline" className="mb-2">Vercel</Badge>
+                <p className="text-xs text-muted-foreground">Deployment</p>
+              </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Project Info */}
+        {/* Contact Section */}
         <Card className="gradient-border">
           <CardContent className="pt-6">
             <div className="text-center">
               <p className="text-muted-foreground mb-4">
-                Built for ETH Denver 2024 Hackathon
+                Stay connected with the latest in DeFi and blockchain technology
               </p>
               <div className="flex justify-center space-x-4">
-                <Badge variant="outline">React</Badge>
-                <Badge variant="outline">TypeScript</Badge>
-                <Badge variant="outline">Tailwind CSS</Badge>
-                <Badge variant="outline">Capacitor</Badge>
+                <Button variant="outline" size="sm">
+                  Newsletter
+                </Button>
+                <Button variant="outline" size="sm">
+                  Twitter
+                </Button>
+                <Button variant="outline" size="sm">
+                  Discord
+                </Button>
               </div>
             </div>
           </CardContent>
