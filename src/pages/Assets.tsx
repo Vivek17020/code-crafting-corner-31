@@ -230,15 +230,26 @@ export default function Assets() {
 
       {/* Quick Actions */}
       <div className="flex gap-3 mb-6">
-        <Button className="flex-1 bg-gradient-to-r from-primary to-primary-glow hover:from-primary/90 hover:to-primary-glow/90 transition-all duration-300 shadow-lg hover:shadow-primary/25">
+        <Button 
+          className="flex-1 bg-gradient-to-r from-primary to-primary-glow hover:from-primary/90 hover:to-primary-glow/90 transition-all duration-300 shadow-lg hover:shadow-primary/25"
+          onClick={() => window.open('/app/generate-proof', '_self')}
+        >
           <Send className="h-4 w-4 mr-2" />
-          Send
+          Generate Proof
         </Button>
-        <Button variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10 transition-all duration-300">
+        <Button 
+          variant="outline" 
+          className="flex-1 border-primary/30 hover:bg-primary/10 transition-all duration-300"
+          onClick={() => window.open('/app/browse-events', '_self')}
+        >
           <Plus className="h-4 w-4 mr-2" />
-          Receive
+          Browse Events
         </Button>
-        <Button variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10 transition-all duration-300">
+        <Button 
+          variant="outline" 
+          className="flex-1 border-primary/30 hover:bg-primary/10 transition-all duration-300"
+          onClick={() => window.open('/app/swap', '_self')}
+        >
           <ArrowUpDown className="h-4 w-4 mr-2" />
           Swap
         </Button>

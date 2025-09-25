@@ -14,6 +14,8 @@ import Swap from "./pages/Swap";
 import Bridge from "./pages/Bridge";
 import History from "./pages/History";
 import SettingsPage from "./pages/Settings";
+import GenerateProof from "./pages/GenerateProof";
+import BrowseEvents from "./pages/BrowseEvents";
 import AppShell from "./components/AppShell";
 import NotFound from "./pages/NotFound";
 
@@ -36,6 +38,8 @@ const App = () => (
                 <Route path="/app/bridge" element={<AppShell><ErrorBoundary><Bridge /></ErrorBoundary></AppShell>} />
                 <Route path="/app/history" element={<AppShell><ErrorBoundary><History /></ErrorBoundary></AppShell>} />
                 <Route path="/app/settings" element={<AppShell><ErrorBoundary><SettingsPage /></ErrorBoundary></AppShell>} />
+                <Route path="/app/generate-proof" element={<AppShell><ErrorBoundary><GenerateProof /></ErrorBoundary></AppShell>} />
+                <Route path="/app/browse-events" element={<AppShell><ErrorBoundary><BrowseEvents /></ErrorBoundary></AppShell>} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

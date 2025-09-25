@@ -4,8 +4,8 @@ import { Input } from "@/components/ui/input";
 
 const Header = () => {
   const categories = [
-    "Home", "Business", "Education", "General", 
-    "Politics", "Science", "Sports", "Technology", "World"
+    "Home", "Assets", "Swap", "Bridge", 
+    "History", "Settings", "About"
   ];
 
   return (
@@ -18,7 +18,7 @@ const Header = () => {
             <div className="bg-primary text-primary-foreground px-2 py-1 rounded text-sm font-bold">
               TB
             </div>
-            <h1 className="text-xl font-bold text-primary">TheBulletinBriefs</h1>
+            <h1 className="text-xl font-bold text-primary">OneWallet</h1>
           </div>
 
           {/* Right Actions */}
