@@ -18,10 +18,10 @@ export default function About() {
           </Link>
           <div>
             <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              About TheBulletinBriefs
+              About OneWallet
             </h1>
             <p className="text-muted-foreground mt-2">
-              Your trusted source for crypto, DeFi, and blockchain news
+              Your unified multi-chain crypto wallet dashboard
             </p>
           </div>
         </div>
@@ -36,10 +36,10 @@ export default function About() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              TheBulletinBriefs delivers comprehensive coverage of the rapidly evolving cryptocurrency and DeFi ecosystem. 
-              We provide real-time news, in-depth analysis, and actionable insights to help our readers stay ahead in the 
-              digital asset space. Our platform combines cutting-edge technology with expert journalism to deliver the 
-              most relevant and timely information.
+              OneWallet provides a unified dashboard for managing multiple blockchain wallets with seamless multi-chain support. 
+              Our platform enables users to track their crypto portfolio, execute token swaps, bridge assets across chains, 
+              and monitor transaction history all in one place. Built with cutting-edge DeFi integrations and industry-leading 
+              APIs, we deliver the most comprehensive and user-friendly crypto wallet experience.
             </p>
           </CardContent>
         </Card>
